@@ -1,0 +1,832 @@
+/* ================================
+   GOOGLE FONTS
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Teko:wght@500;600;700&display=swap');
+
+
+/* ================================
+   COLOR VARIABLES
+================================ */
+
+:root {
+    --gray-black: #1b1b1f;
+    --red: #d90429;
+    --black: #000000;
+    --white: #ffffff;
+    --orange: #f97316;
+}
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    background-color: var(--gray-black);
+    color: var(--white);
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    background-color: var(--black);
+
+    width: 100%;
+
+    border-bottom: 3px solid var(--red);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* ================================
+   NAVIGATION BAR
+================================ */
+
+.navbar {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 35px;
+
+    padding: 0 30px;
+}
+
+
+/* Navigation links */
+
+.navbar > a,
+.dropbutton {
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-family: 'Rajdhani', sans-serif;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    padding: 25px 0;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Navigation hover */
+
+.navbar > a:hover,
+.dropbutton:hover {
+    color: var(--red);
+}
+
+
+/* ================================
+   DROPDOWN
+================================ */
+
+.dropdown {
+    position: relative;
+}
+
+
+/* Dropdown button */
+
+.dropbutton {
+    display: block;
+}
+
+
+/* Dropdown menu */
+
+.dropdown > div {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    min-width: 210px;
+
+    background-color: var(--black);
+
+    border: 1px solid var(--red);
+
+    border-top: 3px solid var(--red);
+
+    border-radius: 0 0 10px 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Show dropdown */
+
+.dropdown:hover > div {
+    display: block;
+}
+
+
+/* Dropdown links */
+
+.dropdown > div a {
+    display: block;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    font-family: 'Rajdhani', sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+/* Dropdown hover */
+
+.dropdown > div a:hover {
+    background-color: var(--red);
+
+    color: var(--white);
+
+    padding-left: 25px;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+main {
+    width: 100%;
+}
+
+
+/* ================================
+   PAGE INTRODUCTION
+================================ */
+
+.content-section {
+    text-align: center;
+
+    padding: 90px 8% 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1b1b1f 0%,
+            #24242a 50%,
+            #111111 100%
+        );
+
+    border-bottom: 1px solid #333333;
+}
+
+
+/* Main heading */
+
+.content-section h1 {
+    font-family: 'Teko', sans-serif;
+
+    color: var(--red);
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    line-height: 0.95;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+/* Introduction paragraph */
+
+.content-section p {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    color: #dddddd;
+
+    font-size: 17px;
+}
+
+
+/* ================================
+   SPORTS SECTIONS
+================================ */
+
+.sports-section {
+    padding: 70px 7%;
+}
+
+
+/* Section headings */
+
+.sports-section h2 {
+    font-family: 'Teko', sans-serif;
+
+    color: var(--red);
+
+    font-size: 42px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    position: relative;
+}
+
+
+/* Orange line */
+
+.sports-section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    background-color: var(--orange);
+
+    margin: 12px auto 0;
+
+    border-radius: 5px;
+}
+
+
+/* ================================
+   SPORTS GRID
+================================ */
+
+.sports-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* ================================
+   SPORT CARD
+================================ */
+
+.sport-card {
+    background-color: var(--black);
+
+    border: 1px solid #333333;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Sport card hover */
+
+.sport-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--red);
+
+    box-shadow:
+        0 12px 30px rgba(217, 4, 41, 0.25);
+}
+
+
+/* Sport image */
+
+.sport-card img {
+    display: block;
+
+    width: 100%;
+
+    height: 288px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Sport image hover */
+
+.sport-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Sport title */
+
+.sport-card h3 {
+    font-family: 'Teko', sans-serif;
+
+    color: var(--white);
+
+    font-size: 30px;
+
+    letter-spacing: 1px;
+
+    padding: 18px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Sport title hover */
+
+.sport-card:hover h3 {
+    color: var(--orange);
+}
+
+
+/* Sport links */
+
+.sport-card a {
+    text-decoration: none;
+
+    display: block;
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   ATHLETE GALLERY
+================================ */
+
+.athlete-gallery {
+    padding: 70px 7%;
+}
+
+
+/* Athlete gallery heading */
+
+.athlete-gallery h2 {
+    font-family: 'Teko', sans-serif;
+
+    color: var(--red);
+
+    font-size: 42px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   ATHLETE GRID
+================================ */
+
+.athlete-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* ================================
+   ATHLETE CARD
+================================ */
+
+.athlete-card {
+    background-color: var(--black);
+
+    border: 1px solid #333333;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Athlete card hover */
+
+.athlete-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--orange);
+
+    box-shadow:
+        0 12px 30px rgba(249, 115, 22, 0.30);
+}
+
+
+/* ================================
+   ORANGE ATHLETE BACKGROUND
+================================ */
+
+.athlete-background {
+    height: 350px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--orange) 0%,
+            var(--orange) 65%,
+            var(--red) 100%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+}
+
+
+/* Decorative diagonal line */
+
+.athlete-background::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180%;
+
+    height: 80px;
+
+    background-color: rgba(0, 0, 0, 0.12);
+
+    transform: rotate(-20deg);
+
+    top: 40px;
+
+    left: -40%;
+}
+
+
+/* Another decorative line */
+
+.athlete-background::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180%;
+
+    height: 35px;
+
+    background-color: rgba(255, 255, 255, 0.15);
+
+    transform: rotate(-20deg);
+
+    top: 130px;
+
+    left: -40%;
+}
+
+
+/* ================================
+   ATHLETE IMAGE
+================================ */
+
+.athlete-background img {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+
+    display: block;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* Athlete image hover */
+
+.athlete-card:hover .athlete-background img {
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   ATHLETE INFORMATION
+================================ */
+
+.athlete-info {
+    padding: 20px;
+
+    background-color: var(--black);
+
+    text-align: center;
+}
+
+
+/* Athlete name */
+
+.athlete-info h3 {
+    font-family: 'Teko', sans-serif;
+
+    color: var(--white);
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Athlete name hover */
+
+.athlete-card:hover .athlete-info h3 {
+    color: var(--orange);
+}
+
+
+/* Athlete description */
+
+.athlete-info p {
+    color: #cccccc;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   ATHLETE LINK
+================================ */
+
+.athlete-card > a {
+    display: block;
+
+    text-decoration: none;
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: var(--black);
+
+    border-top: 3px solid var(--red);
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+
+/* Footer heading */
+
+.footer h2 {
+    font-family: 'Teko', sans-serif;
+
+    color: var(--red);
+
+    font-size: 36px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Footer paragraph */
+
+.footer p {
+    color: #bbbbbb;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    margin: 5px 0;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        gap: 20px;
+    }
+
+
+    .navbar > a,
+    .dropbutton {
+        font-size: 16px;
+    }
+
+
+    .sports-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .athlete-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .athlete-background {
+        height: 320px;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .header {
+        position: relative;
+    }
+
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 15px 0;
+    }
+
+
+    .navbar > a,
+    .dropbutton {
+        padding: 10px;
+    }
+
+
+    .dropdown {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .dropdown > div {
+        position: static;
+
+        transform: none;
+
+        width: 100%;
+
+        border-radius: 0;
+    }
+
+
+    .content-section {
+        padding: 60px 20px;
+    }
+
+
+    .content-section h1 {
+        font-size: 55px;
+    }
+
+
+    .sports-section {
+        padding: 50px 20px;
+    }
+
+
+    .athlete-gallery {
+        padding: 50px 20px;
+    }
+
+
+    .sports-section h2,
+    .athlete-gallery h2 {
+        font-size: 32px;
+    }
+
+
+    .sport-card img {
+        height: 230px;
+    }
+
+
+    /* One athlete per row on small screens */
+
+    .athlete-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .athlete-background {
+        height: 320px;
+    }
+
+
+    .athlete-info h3 {
+        font-size: 28px;
+    }
+
+}
