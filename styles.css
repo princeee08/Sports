@@ -18,6 +18,7 @@
 }
 
 
+
 /* ================================
    RESET
 ================================ */
@@ -41,6 +42,8 @@ body {
 
     line-height: 1.6;
 }
+
+
 
 
 /* ================================
@@ -257,6 +260,91 @@ main {
 
 
 /* ================================
+   ABOUT PAGE
+================================ */
+
+.section-label {
+    color: var(--orange);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-section {
+    text-align: center;
+}
+
+.about-section--dark {
+    background-color: #151519;
+}
+
+.about-copy {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-copy > p:last-child,
+.about-cta > p {
+    color: #dddddd;
+    font-size: 17px;
+}
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-value {
+    background-color: var(--black);
+    border: 1px solid #333333;
+    border-top: 3px solid var(--orange);
+    border-radius: 10px;
+    padding: 30px 24px;
+}
+
+.about-value h3 {
+    color: var(--white);
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.about-value p {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.about-cta {
+    background: linear-gradient(135deg, #1b1b1f 0%, #310b12 100%);
+}
+
+.about-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background-color: var(--red);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: var(--orange);
+    transform: translateY(-3px);
+}
+
+
+/* ================================
    SPORTS SECTIONS
 ================================ */
 
@@ -419,6 +507,7 @@ main {
 .athlete-gallery {
     padding: 70px 7%;
 }
+
 
 
 /* Athlete gallery heading */
@@ -827,6 +916,517 @@ main {
 
     .athlete-info h3 {
         font-size: 28px;
+    }
+
+}
+
+
+/* ================================
+   ABOUT US PAGE
+================================ */
+
+/* ABOUT INTRODUCTION */
+
+.gallery-intro {
+    text-align: center;
+    padding: 90px 8% 70px;
+    background:
+        linear-gradient(
+            135deg,
+            #1b1b1f 0%,
+            #24242a 50%,
+            #111111 100%
+        );
+    border-bottom: 1px solid #333333;
+}
+
+.gallery-intro h1 {
+    font-family: 'Teko', sans-serif;
+    color: var(--red);
+    font-size: clamp(50px, 7vw, 80px);
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.gallery-intro p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #dddddd;
+    font-size: 17px;
+}
+
+
+/* ABOUT SECTIONS */
+
+.about-section {
+    padding: 70px 8%;
+    background-color: var(--gray-black);
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--black);
+    border-left: 5px solid var(--red);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.about-content h2 {
+    font-family: 'Teko', sans-serif;
+    color: var(--red);
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-content h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--orange);
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+.about-content p {
+    color: #dddddd;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ================================
+   GROUP MEMBERS
+================================ */
+
+.members-section {
+    padding: 70px 7%;
+    background-color: #151519;
+}
+
+.members-section > h2 {
+    font-family: 'Teko', sans-serif;
+    color: var(--red);
+    font-size: 42px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.members-section > h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--orange);
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+
+/* MEMBERS GRID */
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* MEMBER CARD */
+
+.member-card {
+    background-color: var(--black);
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* MEMBER HOVER EFFECT */
+
+.member-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--orange);
+    box-shadow:
+        0 10px 25px rgba(249, 115, 22, 0.25);
+}
+
+
+/* MEMBER NAME */
+
+.member-card h3 {
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+
+/* MEMBER NAME HOVER */
+
+.member-card:hover h3 {
+    color: var(--orange);
+}
+
+
+/* ================================
+   ABOUT US RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .about-content {
+        padding: 30px;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery-intro {
+        padding: 60px 20px;
+    }
+
+    .gallery-intro h1 {
+        font-size: 50px;
+    }
+
+    .gallery-intro p {
+        font-size: 15px;
+    }
+
+    .about-section {
+        padding: 50px 20px;
+    }
+
+    .about-content {
+        padding: 25px;
+        border-left: 4px solid var(--red);
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .members-section {
+        padding: 50px 20px;
+    }
+
+    .members-section > h2 {
+        font-size: 35px;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .member-card {
+        padding: 22px;
+    }
+
+}
+
+/* ================================
+   ATHLETICS SPORT PAGE
+================================ */
+
+/* SPORT BANNER */
+
+.sport-banner {
+    height: 420px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("images/athletics-banner.jpg") center/cover no-repeat;
+
+    border-bottom: 4px solid var(--red);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* SPORT INFORMATION SECTIONS */
+
+.sport-section {
+    padding: 70px 8%;
+    background-color: var(--gray-black);
+}
+
+
+/* ALTERNATING SECTION BACKGROUND */
+
+.sport-section:nth-child(odd) {
+    background-color: #151519;
+}
+
+
+/* SECTION CONTENT CARD */
+
+.section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+
+    background-color: var(--black);
+
+    border-left: 5px solid var(--red);
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* MAIN TITLE */
+
+.section-content h1 {
+    font-family: 'Teko', sans-serif;
+    color: var(--red);
+
+    font-size: clamp(55px, 8vw, 85px);
+    font-weight: 700;
+
+    letter-spacing: 3px;
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+/* SECTION HEADINGS */
+
+.section-content h2 {
+    font-family: 'Teko', sans-serif;
+    color: var(--red);
+
+    font-size: 42px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+/* ORANGE LINE UNDER HEADINGS */
+
+.section-content h1::after,
+.section-content h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    background-color: var(--orange);
+
+    margin-top: 10px;
+
+    border-radius: 5px;
+}
+
+
+/* PARAGRAPHS */
+
+.section-content p {
+    color: #dddddd;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   BENEFITS LIST
+================================ */
+
+.benefits-list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.benefits-list li {
+    position: relative;
+
+    padding: 18px 20px 18px 45px;
+
+    background-color: #1b1b1f;
+
+    border-left: 3px solid var(--orange);
+
+    border-radius: 6px;
+
+    color: #dddddd;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* BENEFIT BULLET */
+
+.benefits-list li::before {
+    content: "➜";
+
+    position: absolute;
+
+    left: 17px;
+    top: 18px;
+
+    color: var(--orange);
+
+    font-weight: bold;
+}
+
+
+/* BENEFIT HOVER */
+
+.benefits-list li:hover {
+    transform: translateX(6px);
+
+    background-color: #24242a;
+
+    border-left-color: var(--red);
+}
+
+
+/* STRONG TEXT */
+
+.benefits-list strong {
+    color: var(--white);
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+
+    .sport-banner {
+        height: 350px;
+    }
+
+    .sport-section {
+        padding: 60px 5%;
+    }
+
+    .section-content {
+        padding: 30px;
+    }
+
+    .section-content h1 {
+        font-size: 65px;
+    }
+
+    .section-content h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .sport-banner {
+        height: 250px;
+    }
+
+    .sport-section {
+        padding: 50px 20px;
+    }
+
+    .section-content {
+        padding: 25px;
+
+        border-left: 4px solid var(--red);
+    }
+
+    .section-content h1 {
+        font-size: 55px;
+    }
+
+    .section-content h2 {
+        font-size: 34px;
+    }
+
+    .section-content p {
+        font-size: 14px;
+    }
+
+    .benefits-list li {
+        padding: 16px 15px 16px 40px;
+
+        font-size: 14px;
     }
 
 }
